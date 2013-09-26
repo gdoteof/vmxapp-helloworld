@@ -22,15 +22,20 @@ VMX.callback = function(detections){
   var mc = VMX.getMagicCanvas();
   var mcc = mc.getContext('2d');
   
-  VMX.drawer = {};
+  if(!VMX.drawer){
+    console.log("initializing drawer container");
+    VMX.drawer = {};
+  }
 
   if(!VMX.drawer.started){
+    console.log("drawer wasn't going. starting...");
     VMX.drawer.started = true;
     mcc.beginPath();
     mcc.moveTo(x,y);
     return;
   }
 
+  console.log("already going, are we drawing????");
   //already in middle of draw, so.
   mcc.lineTo(x,y);
   mcc.closePath();
