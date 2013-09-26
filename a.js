@@ -1,6 +1,6 @@
 VMX.callback = function(detections){
-  console.log("inside the callback");
-  console.log(detections);
+
+  if(detections[0].score < .25){ return; }
 
   //This comment should have more info
   //document.body.style.backgroundColor="#f3f3f3";
@@ -39,7 +39,7 @@ VMX.callback = function(detections){
   //already in middle of draw, so.
   mcc.lineTo(x,y);
   mcc.closePath();
-  mcc.lineWidth = 5;
+  mcc.lineWidth = 2;
   mcc.fillStyle = '#8ED6FF';
   mcc.fill();
   mcc.strokeStyle = '#0000ff';
