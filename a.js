@@ -6,7 +6,3 @@ VMX.callback = function(detections){
 VMX.config.useMagicCanvas = true;
 
 
-VMX.on_leave("fist", function(detection){
-
-});
-
