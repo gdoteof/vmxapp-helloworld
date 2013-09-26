@@ -3,9 +3,10 @@ VMX.callback = function(detections){
   console.log(detections);
 }
 
+VMX.config.useMagicCanvas = true;
 
 
-vmx.on_leave("fist", function(detection){
+VMX.on_leave("fist", function(detection){
 
 });
 
