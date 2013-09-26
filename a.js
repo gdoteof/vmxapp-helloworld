@@ -4,7 +4,6 @@ VMX.callback = function(detections){
 }
 
 
-vmx.enter("fist").moveto({region}).moveto({otherregion});
 
 vmx.on_leave("fist", function(detection){
 
